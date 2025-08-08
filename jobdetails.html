@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job details</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+ <style>
+   
+    body { font-family: sans-serif; background: #f4f4f4; padding: 20px; }
+    .job-container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    h1 { font-size: 26px;gap:30px }
+    .section-title { margin-top: 15px;  margin-bottom: 10px; font-size: 18px; font-weight: bold; }
+    ul { padding-left: 20px; }
+    .apply-btn {
+      margin-top: 30px;
+      display: inline-block;
+      padding: 12px 24px;
+      background: #28a745;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .success-message {
+      display: none;
+      background: #28a745;
+      color: #fff;
+      padding: 10px 15px;
+      margin-top: 15px;
+      border-radius: 5px;
+    }
+    .resume-upload {
+  /* max-width: 500px;
+  margin: 40px auto; */
+  /* padding: 30px; */
+  /* background-color: #f9f9f9; */
+  border-radius: 10px;
+  /* text-align: center; */
+}
+
+.resume-upload h2 {
+  margin-bottom: 20px;
+}
+
+.resume-upload input[type="text"],
+.resume-upload input[type="email"],
+.resume-upload input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.resume-upload button {
+  background-color: #1e0b6a;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.resume-upload button:hover {
+  background-color: #0e9e70;
+}
+
+#formMessage {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 576px) {
+  .resume-upload {
+    padding: 20px;
+  }
+
+  .resume-upload button {
+    width: 100%;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="job-container" id="jobDetails">
+    <h1>Loading...</h1>
+  </div>
+
+  <!-- JavaScript -->
+ <script>
+  const jobContainer = document.getElementById("jobDetails");
+  const params = new URLSearchParams(window.location.search);
+  const jobId = params.get("id");
+
+  fetch("jobs.json")
+    .then(res => res.json())
+    .then(data => {
+      const job = data.find(j => j.id === jobId);
+
+      if (!job) {
+        jobContainer.innerHTML = "<h1>Job not found.</h1>";
+        return;
+      }
+
+      jobContainer.innerHTML = `
+        <h1>${job.title}</h1>
+        <p><strong>Location:</strong> ${job.location}</p>
+        <p><strong>Type:</strong> ${job.type}</p>
+        <p><strong>Salary:</strong> ${job.salary}</p>
+
+        <p class="section-title">Description</p>
+        <p>${job.description}</p>
+
+        <p class="section-title">Responsibilities</p>
+        <ul>${job.responsibilities.map(item => `<li>${item}</li>`).join("")}</ul>
+
+        <p class="section-title">Qualifications</p>
+        <ul>${job.qualifications.map(item => `<li>${item}</li>`).join("")}</ul>
+
+        <section class="resume-upload">
+          <p class="section-title">Upload Resume <span style="color:red;">*</span></p>
+          <form id="resumeForm" enctype="multipart/form-data">
+            <input type="text" id="name" placeholder="Full Name" required />
+            <input type="email" id="email" placeholder="Email Address" required />
+            <input type="file" id="resume" accept=".pdf,.doc,.docx" required />
+            <p id="formMessage" style="margin-top: 8px;"></p>
+            <button type="submit" class="apply-btn">Apply</button>
+          </form>
+        </section>
+      `;
+
+      const form = document.getElementById("resumeForm");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const file = document.getElementById("resume").files[0];
+        const message = document.getElementById("formMessage");
+
+        // Basic checks
+        if (!name || !email || !file) {
+          message.textContent = "❌ All fields are required.";
+          message.style.color = "red";
+          return;
+        }
+
+        const validExtensions = ["pdf", "doc", "docx"];
+        const fileExtension = file.name.split(".").pop().toLowerCase();
+        const maxFileSize = 10 * 1024 * 1024;
+
+        if (!validExtensions.includes(fileExtension)) {
+          message.textContent = "❌ Only .pdf, .doc, or .docx files are allowed.";
+          message.style.color = "red";
+          return;
+        }
+
+        if (file.size > maxFileSize) {
+          message.textContent = "❌ File size must be under 2MB.";
+          message.style.color = "red";
+          return;
+        }
+
+        message.textContent = "✅ Resume uploaded successfully!";
+        message.style.color = "green";
+
+        setTimeout(() => {
+          alert("🎉 Application Submitted Successfully!");
+          message.textContent = "";
+          form.reset();
+        }, 1200);
+      });
+    });
+</script>
+
+</body>
+
+</html>

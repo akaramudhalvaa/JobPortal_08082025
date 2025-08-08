@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Job Listings</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="navbar">Job Portal</nav>
+
+  <section class="filters">
+    <select id="categoryFilter">
+      <option value="">All Categories</option>
+      <option value="IT">IT</option>
+      <option value="Finance">Finance</option>
+      <option value="Design">Design</option>
+      <option value="marketing">Marketing</option>
+      <option value="customer">Customer service</option>
+      <option value="Hresource">Human Resource</option>
+      <option value="Pmanagement">Project Management</option>
+      <option value="Business">Business Development</option>
+      <option value="Sales">Sales & Communication</option>
+      <option value="Teaching">Teaching & Education</option>
+      <option value="Design & Creative">Design & Creative</option>
+      
+      
+    </select>
+    <select id="locationFilter">
+      <option value="">All Locations</option>
+      <option value="New York">New York</option>
+      <option value="California">California</option>
+    </select>
+     <button type="submit">Search</button>
+  </section>
+
+  <section id="jobsContainer" class="job-listings"></section>
+
+  <script src="script.js"></script>
+</body>
+</html>

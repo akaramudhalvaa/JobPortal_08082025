@@ -1,0 +1,134 @@
+[
+  {
+    "id": "senior-developer",
+    "title": "Senior Developer",
+    "location": "New York, NY",
+    "type": "Full Time",
+    "salary": "₹90,000 - ₹120,000",
+    "description": "Lead development teams and build scalable web apps.",
+    "responsibilities": [
+      "Design and build scalable applications using modern frameworks.",
+      "Mentor junior developers and conduct code reviews.",
+      "Integrate APIs and ensure cross-browser compatibility."
+    ],
+    "qualifications": [
+      "5+ years of professional development experience.",
+      "Proficient in JavaScript, React, and Node.js.",
+      "Bachelor's degree in Computer Science or equivalent."
+    ]
+    
+    
+  },
+  {
+    "id": "project-manager",
+    "title": "Project Manager",
+    "location": "Velachery",
+    "type": "Full Time",
+    "salary": "₹75,000 - ₹95,000",
+    "description": "Manage client projects, timelines, and team coordination.",
+    "responsibilities": [
+      "Define project scopes and schedules.",
+      "Collaborate with stakeholders and team members.",
+      "Ensure timely delivery within budget."
+    ],
+    "qualifications": [
+      "3+ years project management experience.",
+      "Excellent communication and leadership skills.",
+      "PMP certification preferred."
+    ]
+  },
+ {
+  "id": "content-writer",
+  "title": "Content Writer",
+  "location": "Remote",
+  "type": "Part Time",
+  "salary": "₹75,000 - ₹95,000",
+  "description": "We are looking for a skilled Content Writer to manage client projects, timelines, and collaborate with teams to create high-quality content that aligns with brand goals.",
+  "responsibilities": [
+    "Research industry-related topics and stay up to date with trends.",
+    "Write clear, concise, and compelling content for blogs, websites, emails, social media, product descriptions, and other marketing materials.",
+    "Use content management systems (e.g., WordPress) to publish and format content.",
+    "Edit and proofread content to ensure grammatical accuracy and consistency in tone and style.",
+    "Collaborate with clients, designers, and marketers to produce cohesive and impactful content."
+  ],
+  "qualifications": [
+    "Bachelor's degree in English, Journalism, Marketing, Communications, or a related field.",
+    "Proven experience as a content writer, copywriter, or in a similar role.",
+    "Excellent writing, editing, and proofreading skills.",
+    "Familiarity with SEO best practices and tools (e.g., Yoast, SEMrush).",
+    "Experience with CMS platforms like WordPress.",
+    "Strong time management and communication skills."
+  ]
+},
+{
+  "id": "marketing-lead",
+  "title": "Marketing Lead",
+  "location": "Chennai",
+  "type": "Featured",
+  "salary": "₹80,000 - ₹110,000",
+  "description": "We are seeking a results-driven Marketing Lead to develop, implement, and manage marketing campaigns that promote our products and services. You will play a major role in enhancing brand awareness and driving web traffic.",
+  "responsibilities": [
+    "Develop and execute comprehensive marketing strategies and campaigns.",
+    "Lead the marketing team to meet KPIs and revenue targets.",
+    "Analyze consumer behavior and market trends to adjust strategies.",
+    "Oversee social media, email campaigns, SEO/SEM, and paid advertising.",
+    "Collaborate with product and sales teams to align marketing goals."
+  ],
+  "qualifications": [
+    "5+ years of experience in marketing or a related role.",
+    "Strong knowledge of digital marketing tools and analytics platforms.",
+    "Excellent leadership, communication, and project management skills.",
+    "Bachelor's degree in Marketing, Business, or a related field.",
+    "Experience with marketing automation tools is a plus."
+  ]
+},
+{
+  "id": "uiux-designer",
+  "title": "UI/UX Designer",
+  "location": "Remote",
+  "type": "Full Time",
+  "salary": "₹70,000 - ₹95,000",
+  "description": "We are looking for a creative and detail-oriented UI/UX Designer to lead the design and user experience efforts for our digital products. You'll transform complex user needs into intuitive and visually appealing interfaces.",
+  "responsibilities": [
+    "Design user-centered UI/UX solutions based on research and best practices.",
+    "Create wireframes, prototypes, and high-fidelity mockups for web and mobile apps.",
+    "Collaborate with developers, product managers, and stakeholders to define design requirements.",
+    "Conduct user research, usability testing, and A/B testing to improve user experience.",
+    "Maintain and evolve our design system and brand consistency across all platforms."
+  ],
+  "qualifications": [
+    "3+ years of experience in UI/UX design or related field.",
+    "Proficiency in design tools like Figma, Sketch, Adobe XD, or similar.",
+    "Strong understanding of responsive design and accessibility standards.",
+    "Excellent portfolio showcasing user-centered design projects.",
+    "Bachelor's degree in Design, HCI, or a related field (preferred)."
+  ]
+},
+{
+  "id": "product-designer",
+  "title": "Product Designer",
+  "location": "Chennai",
+  "type": "Part Time",
+  "salary": "₹90,000 - ₹120,000",
+  "description": "We are seeking a talented Product Designer to craft exceptional user experiences and help shape the direction of our product. You will work closely with cross-functional teams to design features that are both functional and beautiful.",
+  "responsibilities": [
+    "Collaborate with product managers and engineers to define and implement innovative solutions.",
+    "Create wireframes, prototypes, and final UI designs for web and mobile products.",
+    "Participate in user research and usability testing to gather insights and validate designs.",
+    "Advocate for the user while balancing business goals and technical constraints.",
+    "Maintain design consistency with the existing design system and brand identity."
+  ],
+  "qualifications": [
+    "2+ years of experience in product or UX design.",
+    "Proficient with design tools like Figma, Adobe XD, or Sketch.",
+    "Strong visual design skills and attention to detail.",
+    "Experience designing for web and mobile interfaces.",
+    "Portfolio showcasing user-centered design solutions."
+  ]
+}
+
+
+
+
+
+]

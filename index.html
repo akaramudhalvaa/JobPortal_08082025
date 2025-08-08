@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JobEntry</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">TIEUP</a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#" class="active">HOME</a></li>
+            <li><a href="index.html">ABOUT</a></li>
+            <li class="dropdown">
+                <a href="#jobs" class="nav-links">JOBS </a>
+                <!-- <div class="dropdown-content">
+                    <a href="index.html">Browse Jobs</a>
+                    <a href="#">Saved Jobs</a>
+                </div> -->
+            </li>
+            <!-- <li class="dropdown">
+                <a href="#">PAGES ▾</a>
+                <div class="dropdown-content">
+                    <a href="#">Login</a>
+                    <a href="#">Register</a>
+                </div>
+            </li> -->
+            <li><a href="#footer">CONTACT</a></li>
+        </ul>
+     <div class="align-end">
+        <a href="postjob.html" class="post-job-btn blue-btn">Post A Job </a>
+        <a href="login.html" class="post-job-btn">Login</a> 
+     </div>
+        
+    </nav>
+
+    <header class="hero">
+        <div class="carousel">
+            <div class="carousel-slide active" style="background-image: url('img/carousel-1.jpg');">
+                <div class="hero-content">
+                    <h1>Find The Perfect Job That<br>You Deserved</h1>
+                    <p>"You deserve a job that values your talent, ignites your passion, <br>and respects your
+                        potential."</p>
+                    <div class="buttons">
+                        <button class="green-btn">Search A Job</button>
+                        <button class="blue-btn">Find A Talent</button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-slide" style="background-image: url('img/carousel-2.jpg');">
+                <div class="hero-content">
+                    <h1>Grow Your Career with <br> Top Companies</h1>
+                    <p>Browse thousands of job listings and apply in one click.<br>Join the future of employment today.
+                    </p>
+                    <div class="buttons">
+                        <button class="green-btn">Search A Job</button>
+                        <button class="blue-btn">Post A Job</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Navigation buttons -->
+            <button class="carousel-btn prev">
+
+                <button class="carousel-btn next"></button>
+        </div>
+    </header>
+
+    <!-- Search Bar Section -->
+    <section class="job-filter-section"id="search">
+        <form class="job-filter-form" action="index.html" method="GET">
+            <input type="text" name="keyword" placeholder="Keyword" />
+
+            <select name="category" id="category-filter">
+                <option value="">All Categories</option>
+                <option value="Design">Design</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Customer Service">Customer Service</option>
+                <option value="Human Resource">Human Resource</option>
+                <option value="Project Management">Project Management</option>
+                <option value="Business Development">Business Development</option>
+                <option value="Sales & Communication">Sales & Communication</option>
+                <option value="Teaching & Education">Teaching & Education</option>
+                <option value="Design & Creative">Design & Creative</option>
+            </select>
+
+            <select name="location" id="location-filter">
+                <option value="">Location</option>
+                <option value="New York">New York</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Remote">Remote</option>
+                <option value="USA">USA</option>
+            </select>
+
+            <button type="submit">Search</button>
+        </form>
+    </section>
+
+    <section class="category-section">
+        <h2 class="section-title">Explore By Category</h2>
+        <div class="category-grid">
+
+            <!-- Category Box -->
+            <div class="category-box " data-category="marketing" data-location="New York">
+                <i class="fas fa-envelope-open-text"></i>
+                <h4>Marketing</h4>
+                <p>236 Vacancy</p>
+            </div>
+
+            <div class="category-box" data-category="customer" data-location="Remote">
+                <i class="fas fa-headset"></i>
+                <h4>Customer Service</h4>
+                <p>213 Vacancy</p>
+            </div>
+
+            <div class="category-box" data-category="Human Resource" data-location="Chennai">
+                <i class="fas fa-user-tie"></i>
+                <h4>Human Resource</h4>
+                <p>125 Vacancy</p>
+            </div>
+
+            <div class="category-box" data-category="project management" data-location="Chennai">
+                <i class="fas fa-tasks"></i>
+                <h4>Project Management</h4>
+                <p>103 Vacancy</p>
+            </div>
+
+            <div class="category-box" data-category="Business Development" data-location="USA">
+                <i class="fas fa-chart-line"></i>
+                <h4>Business Development</h4>
+                <p>130 Vacancy</p>
+            </div>
+
+            <div class="category-box" data-category="Sales & Communication" data-location="Remote">
+                <i class="fas fa-handshake"></i>
+                <h4>Sales & Communication</h4>
+                <p>112 Vacancy</p>
+            </div>
+
+            <div class="category-box" data-category="Teaching & Education" data-location="Chennai">
+                <i class="fas fa-book-reader"></i>
+                <h4>Teaching & Education</h4>
+                <p>126 Vacancy</p>
+            </div>
+
+            <div class="category-box" data-category="Design & Creative" data-location="Chennai">
+                <i class="fas fa-drafting-compass"></i>
+                <h4>Design & Creative</h4>
+                <p>140 Vacancy</p>
+            </div>
+        </div>
+    </section>
+    <section class="about-section">
+        <div class="about-container">
+
+            <!-- Image Grid -->
+            <div class="about-images">
+                <div class="img-box img1">
+                    <img src="img/about-1.jpg" alt="Team">
+                </div>
+                <div class="img-box img2">
+                    <img src="img/about-2.jpg" alt="Meeting">
+                </div>
+                <div class="img-box img3">
+                    <img src="img/about-3.jpg" alt="Office">
+                </div>
+                <div class="img-box img4">
+                    <img src="img/about-4.jpg" alt="Conference">
+                </div>
+            </div>
+
+            <!-- Text Content -->
+            <div class="about-content">
+                <h2>We Help To Get The Best Job<br>And Find A Talent</h2>
+                <p>
+                    We connect skilled professionals with companies that value talent, drive, and purpose.
+                    “Success starts with the right opportunity — and we help you find it.”
+                </p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Expert Career Matching - We help candidates discover roles
+                        that match their skills and aspirations.</li>
+                    <li><i class="fas fa-check-circle"></i> Top Talent Recruitment - Employers find pre-screened,
+                        high-quality candidates faster.</li>
+                    <li><i class="fas fa-check-circle"></i> Reliable & Efficient - Our team ensures every match is
+                        timely, accurate, and aligned with your goals</li>
+                </ul>
+                <a href="#" class="btn-readmore">Read More</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="job-listing-section">
+        <div class="container">
+            <h2 class="section-title">Job Listing</h2>
+
+            <div class="job-tabs">
+                <button class="tab-btn active" data-filter="featured">Featured</button>
+                <button class="tab-btn" data-filter="fulltime">Full Time</button>
+                <button class="tab-btn" data-filter="parttime">Part Time</button>
+            </div>
+            
+            <!-- JOB CATEGORY -->
+<section class="job-cards" id="jobs">
+
+    <div class="job-card" data-id="senior-developer" data-type="featured">
+        <h4>Senior Developer</h4>
+        <p>Type: Featured</p>
+        <div class="job-actions">
+            <a href="jobdetails.html?id=senior-developer" class="apply-btn">Apply Now</a>
+            <button class="save-btn">Save Job</button>
+        </div>
+    </div>
+
+    <div class="job-card" data-id="project-manager" data-type="fulltime">
+        <h4>Project Manager</h4>
+        <p>Type: Full Time</p>
+        <div class="job-actions">
+            <a href="jobdetails.html?id=project-manager" class="apply-btn">Apply Now</a>
+            <button class="save-btn">Save Job</button>
+        </div>
+    </div>
+
+    <div class="job-card" data-id="content-writer" data-type="parttime">
+        <h4>Content Writer</h4>
+        <p>Type: Part Time</p>
+        <div class="job-actions">
+            <a href="jobdetails.html?id=content-writer" class="apply-btn">Apply Now</a>
+            <button class="save-btn">Save Job</button>
+        </div>
+    </div>
+
+    <div class="job-card" data-id="marketing-lead" data-type="featured">
+        <h4>Marketing Lead</h4>
+        <p>Type: Featured</p>
+        <div class="job-actions">
+            <a href="jobdetails.html?id=marketing-lead" class="apply-btn">Apply Now</a>
+            <button class="save-btn">Save Job</button>
+        </div>
+    </div>
+
+    <div class="job-card" data-id="uiux-designer" data-type="fulltime">
+        <h4>UI/UX Designer</h4>
+        <p>Type: Full Time</p>
+        <div class="job-actions">
+            <a href="jobdetails.html?id=uiux-designer" class="apply-btn">Apply Now</a>
+            <button class="save-btn">Save Job</button>
+        </div>
+    </div>
+
+    <div class="job-card" data-id="product-designer" data-type="parttime">
+        <h4>Product Designer</h4>
+        <p>Type: Part Time</p>
+        <div class="job-actions">
+            <a href="jobdetails.html?id=product-designer" class="apply-btn">Apply Now</a>
+            <button class="save-btn">Save Job</button>
+        </div>
+    </div>
+
+</section>
+
+<div class="browse-btn-container" style="text-align: center;">
+    <a href="index.html" class="apply-btn">Browse more jobs</a>
+</div>
+
+
+
+            <!--footer-->
+
+            <footer class="site-footer" id="footer">
+                <div class="footer-container">
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Our Services</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Condition</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Our Services</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Condition</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column contact">
+                        <h4>Contact</h4>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Street, Namakkal,Tamilnadu</p>
+                        <p><i class="fas fa-phone"></i> 9123456985</p>
+                        <p><i class="fas fa-envelope"></i> Tieup@example.com</p>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.linkedin.com/login"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Newsletter</h4>
+                        <p>Get weekly job updates straight to your inbox.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email" required />
+                            <button type="submit"><a href=" https://mail.google.com/">Signup</a></button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>© <strong>TIEUP</strong>, All Right Reserved. </p>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Cookies</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+            </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <script src="script.js"></script>
+</body>
+
+</html>
